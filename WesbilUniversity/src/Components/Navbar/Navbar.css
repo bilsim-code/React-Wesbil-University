@@ -1,0 +1,374 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px ;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.nav-scroll {
+color: gold;
+background:  #212ea2;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left img {
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.left span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 60px;
+}
+
+.nav-items li {
+    margin:  10px;
+}
+
+.link {
+    cursor: pointer;
+    padding: 10px 4px;
+    transition: all .6s
+}
+
+.link:hover {
+    color: #fff;
+    font-size: 15px;
+    border-bottom: 4px solid #fff
+}
+
+.removeStyles {
+    border: none;
+    cursor: pointer;
+}
+
+.close-icon, .menu-icon {
+    display: none;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+#search {
+    flex: 1;
+    padding: 10px ;
+    border: none;
+    outline: none;
+    background: rgb(224, 224, 251);
+    border-radius: 4px;
+
+}
+
+#btn-search {
+    padding: 10px;
+    border: none;
+    outline: none;
+   /* 
+    restore this one
+     color: #fff;
+    background: #212ea2; */
+    color: #000;
+    border: 4px;
+    cursor: pointer;
+}
+
+li.dropdown {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+}
+
+.dropdown svg {
+    padding-left: 4px;
+    padding-top: 8px;
+    font-size: 20px;
+}
+
+.dropdown span {
+    white-space: nowrap;
+}
+
+.drop-items {
+    border-top: 1px solid;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: flex;
+}
+
+.drop-show {
+    display: none;
+}
+
+
+.drop-item {
+    cursor: pointer;
+}
+
+.drop-item:hover {
+    color: #fff
+}
+
+.nowrapStudent {
+    white-space: nowrap;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 14px;
+    padding-left: 6px;
+}
+
+.contact-btn span {
+    white-space: nowrap;
+}
+
+@media(max-width: 1266px) {
+
+    .nav {
+        justify-content: space-around;
+    }
+
+    .left span {
+        display: none;
+    }
+
+   
+}
+
+@media(max-width: 1060px) {
+    .nav-items {
+        padding-left: 30px;
+    }
+
+    .nav-search {
+        margin-left: 40px;
+    }
+
+    .nav-items li {
+        margin: 4px;
+        gap: 4px
+    }
+}
+
+@media(max-width: 1000px) {
+    .nav {
+        display: block;
+        /* border-bottom: 1px solid; */
+        padding: 20px;
+        padding-left: 40px;
+        transition: all 1s;
+        height: 100px;
+        
+    }
+
+    .nav-scroll {
+        color: gold;
+        background:  #212ea2;
+        }
+
+    .left span {
+        display: block;
+    }
+
+    .nav-items {
+        position: fixed;
+        background: rgb(30, 30, 30);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 100px;
+        font-weight: 600;
+        color: gold;
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .nav-items li {
+        padding: 20px 0;
+        margin: 10px 0;
+        width: 100%;
+        
+    }
+
+    .link {
+        padding: 8px 20px;
+        transition: all .6s;
+    }
+
+    .link:hover {
+        border-left: 10px solid #fff;
+        border-bottom: none;
+        color: #fff;
+        font-size: 14px;
+    }
+
+
+    .menu-icon {
+        position: fixed;
+        top: 30px;
+        right: 10px;
+        width: 40px;
+        height: 30px;
+        object-fit: contain;
+        margin-right: 30px;
+        cursor: pointer;
+        /* change this:  */
+        display: block;
+
+    }
+
+    .close-icon {
+        position: fixed;
+        top: 30px;
+        right: 0px;
+        width: 40px;
+        height: 30px;
+        font-size: 2rem;
+        object-fit: contain;
+        margin-right: 30px;
+        cursor: pointer;
+        color: #fff;
+        display: block;
+    }
+
+    .nav-search {
+        position: fixed;
+        top: 120px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        z-index: -1;
+    }
+
+    .nav-hide {
+        position: relative;
+        left: -10000px;
+    }
+
+    #search {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background: rgb(224, 224, 251);
+        border-radius: 4px;
+
+    }
+
+    #btn-search {
+        padding: 10px;
+        border: none;
+        outline: none;
+        background: #212ea2;
+        color: #fff;
+        border: 4px;
+        cursor: pointer;
+        z-index: -1;
+    }
+
+    .navBlur {
+        background: rgba(0, 0, 0, 0.9)
+    }
+
+    .bodyBlur {
+        background-color: rgba(0, 0, 0, 0.244);
+    }
+
+    li.dropdown {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .5s;
+    }
+
+    .dropdown svg {
+        margin-left: 10px;
+       
+    }
+
+    .drop-items {
+        border-top: 1px solid;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 24px;
+        padding-top: 10px;
+    }
+
+    .drop-item {
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        transition: color .4s;
+    }
+
+    .drop-item:hover {
+        color: rgb(231, 49, 95)
+    }
+
+    .guest {
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(231, 49, 95);
+        font-size: 1rem;
+    }
+
+    .drop-show {
+        display: none;
+    }
+}
+
+@media(max-width: 430px) {
+    .left span {
+        display: none;
+    }
+}

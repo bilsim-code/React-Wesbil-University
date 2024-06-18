@@ -1,0 +1,223 @@
+footer {
+    background: rgba(30,30,30);
+    color: #f0f0f0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer .year {
+    font-size: 1rem;
+}
+
+footer .icons {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    color: rgb(250, 221, 55);
+    cursor: pointer;
+}
+
+footer .icons svg {
+    transition: all .6s;
+}
+
+footer .icons svg:hover {
+    color: #fff
+}
+
+@media(max-width: 750px) {
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        height: 120px;
+        padding-bottom: 30px;
+    }
+
+    footer .icons {
+        width: 100%;
+        justify-content: center;
+        gap: 20px
+    }
+}
+
+.above-footer {
+    background: #212ea2;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+    color: #f0f0f0;
+    padding: 80px 40px;
+}
+
+.above-footer .logo img {
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+.above-footer .logo {
+    font-size: 20px;
+    padding: 10px 0
+}
+
+.above-footer p a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: all 2s
+}
+
+.above-footer p a:hover {
+    text-decoration: underline;
+}
+
+.footer-schools {
+    border-left: 1px solid #f0f0f0;
+    padding:  0 10px;
+    height: 300px;
+}
+
+.footer-schools h2 {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.footer-schools p {
+    padding-bottom: 10px;
+}
+
+.footer-campuses {
+    border-left: 1px solid #f0f0f0;
+    padding: 0 10px;
+    height: 300px
+}
+
+.footer-campuses h2 {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.footer-campuses p {
+    padding-bottom: 10px;
+}
+
+.footer-links {
+    border-left: 1px solid #f0f0f0;
+    padding: 0 10px;
+    height: 300px;
+}
+
+.footer-links h2 {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.footer-links p {
+    padding-bottom: 10px;
+}
+
+@media(max-width: 900px) {
+    .above-footer {
+        gap: 20px
+    }
+
+    .above-footer .logo img {
+        width: 180px
+    }
+}
+
+@media(max-width: 771px) {
+    .footer-schools {
+        height: 340px;
+    }
+
+    .footer-campuses {
+        height: 340px;
+    }
+
+    .footer-links {
+        height: 340px;
+    }
+}
+
+@media(max-width: 700px) {
+    .above-footer {
+        display: grid;
+        place-content: center;
+        padding-bottom: 120px;
+    }
+
+    .footer-schools {
+        border-left: 0;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+    .footer-campuses {
+        border-left: 0;
+        height: 150px;
+        padding-top: 30px;
+    }
+    .footer-links {
+        border-left: 0;
+        height: 150px
+    }
+
+    .above-footer .logo {
+        margin: auto;
+    }
+
+    .above-footer .logo img {
+        width: 300px
+    }
+}
+
+.anime {
+    display: flex;
+    gap:3px;
+
+}
+
+.animation {
+    width: 20px;
+    height: 10px;
+    background: gold;
+    margin-top: 3px;
+    border-radius: 4px;
+    animation-name: animation;
+    animation-duration: .9s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacify: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

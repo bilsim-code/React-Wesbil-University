@@ -1,0 +1,67 @@
+.testimonials {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    padding-bottom:50px ;
+}
+
+.test-cont {
+    margin-top: 2rem;
+    padding-top: 30px;
+}
+
+.test-cont h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.test {
+    position: relative;
+}
+
+.test img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media(max-width: 500px) {
+    .testimonials {
+        display: block;
+    }
+    .test img {
+        margin-bottom: 10px;
+    }
+}
+
+.hover-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    background: #3907ec3c;
+    text-align: center;
+    opacity: 0;
+    padding-top: 3rem;
+    transition: all 1s;
+}
+
+.test:hover .hover-cont {
+    opacity: 1;
+    cursor: pointer;
+    padding-top: 0;
+}
+
+.hover-cont img {
+    width: 20%;
+}
+

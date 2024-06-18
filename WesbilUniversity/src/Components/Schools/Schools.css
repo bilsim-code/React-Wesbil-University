@@ -1,0 +1,55 @@
+.schools {
+    font-family: sans-serif;
+    margin-top: 100px;
+    text-align: center;
+    padding: 3rem;
+}
+
+.school-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    gap: 20px;
+}
+
+.school-buttons a button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #212ea2;
+    color: #f0f0f0;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  
+}
+
+@media(max-width: 1230px) {
+    .school-buttons {
+        width: 80%;
+        margin: auto;
+       
+    }
+}
+
+.school-buttons a {
+    position: relative;
+}
+
+.buttonbg {
+    background: #000;
+    position: absolute;
+    width: 60%;
+    height: 44px;
+    bottom: -4.4px;
+    right: 20%;
+    z-index: -1;
+    border-radius: 4px;
+    transition: all .6s
+}
+
+.school-buttons a:hover .buttonbg {
+    width: 100%;
+    right: 0;
+}

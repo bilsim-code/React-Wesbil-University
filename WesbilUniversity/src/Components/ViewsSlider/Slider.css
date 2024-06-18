@@ -1,0 +1,16 @@
+.imgSlider {
+    max-width: 90%;
+    height: 60vh;
+    object-fit: contain;
+    border-radius: 20px;
+    transition: all .4s;
+}
+
+@media(max-width: 1070px) {
+    .imgSlider {
+        width: 600px;
+        height: 80vh;
+        object-fit: contain;
+        
+    }
+} 
