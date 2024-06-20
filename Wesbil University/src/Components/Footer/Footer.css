@@ -189,8 +189,11 @@ footer .icons svg:hover {
 }
 
 .animation {
-    width: 20px;
-    height: 10px;
+    font-size: 10px;
+    color: #000;
+    font-weight: 600;
+    width: 25px;
+    height: 12px;
     background: gold;
     margin-top: 3px;
     border-radius: 4px;

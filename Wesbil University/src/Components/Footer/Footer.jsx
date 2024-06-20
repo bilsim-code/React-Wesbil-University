@@ -31,7 +31,7 @@ const Footer = () => {
         <p><a href="#">Lecturer Login</a></p>
         <p><a href="#">Staff Login</a></p>
         <p><a href="#">Students Email Activation Guide</a></p>
-        <p className='anime'><a href="#">Tenders</a><div className="animation"></div></p>
+        <p className='anime'><a href="#">Tenders</a><span className="animation">new</span></p>
       </div>
     </div>
      <footer>
