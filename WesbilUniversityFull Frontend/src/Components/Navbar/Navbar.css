@@ -1,0 +1,167 @@
+.nav {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 0 10px #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav .logo {
+    width: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-ul li {
+    padding: 0 10px
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: #000;
+    white-space: nowrap;
+    transition: color .6s
+}
+
+.nav-link:hover {
+    color: rgb(244, 209, 11);
+    border-bottom: 4px solid rgb(244, 209, 11);
+}
+
+.nav-link:active {
+    color: rgb(244, 209, 11);
+}
+
+.nav-welcome {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-welcome h3 {
+    white-space: nowrap;
+}
+
+.nav-form  {
+    border: 1px solid;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.nav-form input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.nav-form button {
+    width: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.nav-form button svg {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.contact-btn {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 2px #333;
+    background: transparent;
+    border-radius: 20px;
+    background: rgb(244, 209, 11);
+    cursor: pointer;
+}
+
+.contact-btn img {
+    width: 15px
+}
+
+.bar-icons svg {
+   display: none;
+}
+
+@media(max-width: 1070px) {
+    .nav-ul {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100vh;
+        padding-top: 100px;
+        width: 30%;
+        background: royalblue;
+        line-height: 1.4;
+        box-shadow: 2px 2px 10px #000;
+        transform: translateX(100px) scale(.8);
+        transition: all 1s;
+
+    }
+
+    .nav-ul-show {
+        opacity: 1;
+        display: block;
+        transform: scale(1);
+        transform: translateX(0) scale(1)
+    }
+
+    .nav-ul li {
+        padding: 14px  0;
+    }
+
+    .nav-ul button {
+        width: 110px;
+        margin: 14px;
+    }
+
+    .nav-link {
+        padding: 10px 20px ;
+        transition: all .5s;
+        color: #f0f0f0;
+    }
+
+    .nav-link:hover {
+        border-left: 6px solid #fff;
+        color: #000;
+        border-bottom: 0;
+    }
+
+    .bar-icons svg {
+        display: block;
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+
+    .bodyBarOn {
+        background: rgba(224, 222, 222, 0.5);
+       /*  pointer-events: ; */
+    }
+}
