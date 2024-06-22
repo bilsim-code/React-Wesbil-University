@@ -11,9 +11,11 @@ const ProviderFunction = (props) => {
     const leftRef = useRef();
     const rightRef = useRef();
 
+    const [imageCount, setImageCount] = useState(0)
+
 
     return (
-        <AppContext.Provider value={{barOn, setBarOn, showSearchBar, setShowSearchBar, navRef, leftRef, rightRef, searchValue, setSearchValue}}>
+        <AppContext.Provider value={{barOn, setBarOn, showSearchBar, setShowSearchBar, navRef, leftRef, rightRef, searchValue, setSearchValue, imageCount, setImageCount}}>
             {props.children}
         </AppContext.Provider>
     )

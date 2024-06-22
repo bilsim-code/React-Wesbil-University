@@ -5,7 +5,7 @@ import badge from '../../assets/princeton badge.png'
 const Footer = () => {
   return (
     <>
-    <div className="above-footer">
+    <div className="above-footer" id='contact'>
       <div className="logo">
         <img src={badge} alt="logo" />
         <p>Making World Leaders</p>

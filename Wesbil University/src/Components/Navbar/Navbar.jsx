@@ -52,9 +52,11 @@ const Navbar = () => {
           <span>Welcome to Princeton</span>
         </div>
         <ul className={`nav-items ${showSide ? 'show' : ''}`}>
-          <li><Link className="link">Home</Link></li>
+          <li><Link to='hero' activeClass='active-class' spy={true} smooth={true} offset={-100} duration={500} className="link">Home</Link></li>
+
           <li><Link className="link">myLibrary</Link></li>
-          <li><Link className="link">Schools</Link></li>
+
+          <li><Link to='schoolsid' activeClass='active-class' spy={true} smooth={true} offset={-150} duration={500} className="link">Schools</Link></li>
           {/* update portals to include dropdowns for student portal, staff portal and guest */}
           <li className='dropdown' >
             <Link className={dropdownOn ? 'removeStyles' : 'link'}>
@@ -71,7 +73,7 @@ const Navbar = () => {
             </div>
             </li>
           <li>
-            <button className='contact-btn'><span className='nowrap'>Contact us</span><img src={contactIcon} alt="" className='contact-icon'/></button>
+            <button onClick={() => {document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}} className='contact-btn'><span className='nowrap'>Contact us</span><img src={contactIcon} alt="" className='contact-icon'/></button>
           </li>
         </ul>
         <div className="nav-search" ref={searchRef}>

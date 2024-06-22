@@ -12,6 +12,10 @@
     z-index: 1;
 }
 
+.active-class {
+    border-bottom: 4px solid gold;
+}
+
 
 .nav-scroll {
 color: gold;

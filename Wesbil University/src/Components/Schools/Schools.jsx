@@ -2,7 +2,7 @@ import './Schools.css'
 
 const Schools = () => {
   return (
-    <div className='schools'>
+    <div className='schools' id='schoolsid'>
         <h1>Join Our Schools to pursue your passions</h1>
         <div className="school-buttons">
             <a href="#"><button>School of Technology</button>
