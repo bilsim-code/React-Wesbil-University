@@ -1,0 +1,45 @@
+.hero {
+    background: linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58, .7)), url('../../assets/Princeton header.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.hero-container {
+    padding-left: 30px;
+    line-height: 1.6;
+}
+
+.hero-container h1 {
+    font-size: 44px;
+}
+
+.hero-container p {
+    font-size: 2rem;
+    font-family: serif;
+}
+
+.motto span, .vision span {
+    color: gold
+}
+
+@media(max-width: 600px) {
+    .hero-container {
+        line-height: 1.4;
+        padding-left: 10px;
+    }
+
+    .hero-container h1 {
+        font-size: 30px;
+    }
+
+    .hero-container p {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,27 @@
+.schools {
+    padding: 20px;
+    background: lightgray;
+    margin: 20px 10px;
+}
+
+.schools h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.school-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px
+}
+
+.school-buttons button {
+    background: rgb(7, 7, 69);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}

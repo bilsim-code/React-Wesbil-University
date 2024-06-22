@@ -1,31 +1,17 @@
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
-/* How you import both link from react-scroll and react-router-dom:
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll'; 
-
-<li>
-    <RouterLink to="/contact">Contact</RouterLink>
-</li>
-<li>
-    <ScrollLink to="section1" smooth={true} duration={500}>Section 1</ScrollLink>
-</li>
-*/
-
 import logo from "../../assets/princeton badge.jpg";
 import contact_icon from "../../assets/contact.png";
 import { FaSearch, FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect,  } from "react";
 import { AppContext } from "../../Context/AppContext";
 
 const Navbar = () => {
-  const { barOn, setBarOn } = useContext(AppContext);
-  const [showSearchBar, setShowSearchBar] = useState(false);
-  const navRef = useRef();
+  const { barOn, setBarOn,showSearchBar, setShowSearchBar, navRef, leftRef, rightRef, searchValue, setSearchValue } = useContext(AppContext);
 
-  useEffect(() => {
+ /*  useEffect(() => {
     let body = document.body;
     if (barOn) {
       body.classList.add("no-pointer-events");
@@ -35,39 +21,51 @@ const Navbar = () => {
     } else {
       body.classList.remove("no-pointer-events");
     }
-  }, [barOn]);
+  }, [barOn]); */
+
+  useEffect(() => {
+    let scroll = window.addEventListener('scroll', () => {
+      if(window.scrollY > 100) {
+        navRef.current.classList.add('nav-white')
+      }
+      else {
+        navRef.current.classList.remove('nav-white')
+      }
+    })
+   return() => window.removeEventListener('scroll', scroll)
+  }, [navRef])
 
   return (
-    <nav className="nav">
-      <div className="nav-left">
-        <NavLink className="nav-welcome">
+    <nav className="nav" ref={navRef}>
+      <div className="nav-left" ref={leftRef}>
+        <RouterLink to={'/'} className="nav-welcome">
           <img src={logo} alt="" className="logo" />
           <h3>Princeton University</h3>
-        </NavLink>
+        </RouterLink>
       </div>
-      <ul className={`nav-ul ${barOn ? "nav-ul-show" : ""}`} ref={navRef}>
+      <ul className={`nav-ul ${barOn ? "nav-ul-show" : ""}`} >
         <li>
-          <NavLink className="nav-link">Home</NavLink>
+          <RouterLink className="nav-link">Home</RouterLink>
         </li>
         <li>
           {/* react-scroll */}
-          <Link className="nav-link">Schools</Link>
+          <ScrollLink className="nav-link">Schools</ScrollLink>
         </li>
         <li>
-          <NavLink className="nav-link">myLibrary</NavLink>
+          <RouterLink className="nav-link">myLibrary</RouterLink>
         </li>
         <li>
-          <NavLink className="nav-link">E-registrar</NavLink>
+          <RouterLink className="nav-link">E-registrar</RouterLink>
         </li>
         <li>
-          <NavLink className="nav-link">E-learning</NavLink>
+          <RouterLink className="nav-link">E-learning</RouterLink>
         </li>
         <li>
           {/* react-scroll */}
-          <Link className="nav-link">Quick links</Link>
+          <ScrollLink className="nav-link">Quick links</ScrollLink>
         </li>
         <li>
-          <NavLink className="nav-link">Portals</NavLink>
+          <RouterLink className="nav-link">Portals</RouterLink>
         </li>
         <button className="contact-btn">
           <span>Contact us</span>
@@ -75,17 +73,17 @@ const Navbar = () => {
         </button>
       </ul>
       <form className="nav-form">
-        <input type="search" placeholder="Search" />
+        <input type="search" placeholder="Search" value={searchValue} onChange={e => setSearchValue(e.target.value)}/>
         <button>
           <FaSearch />
         </button>
       </form>
 
-      <div className="nav-form-small">
+      <div className="nav-form-small" ref={rightRef}>
         {showSearchBar && !barOn ? (
           <form className="form-small" onBlur={() => setShowSearchBar(false)}>
             <div className="input-container">
-              <input type="search" placeholder="Search" />
+              <input type="search" placeholder="Search" value={searchValue} onChange={e => setSearchValue(e.target.value)}/>
               <button>
                 <FaSearch />
                 <FaXmark
@@ -103,11 +101,9 @@ const Navbar = () => {
         )}
       </div>
 
-      {/*   <FaSearch className="searchalt" onClick={() => setShowSearchBar(true)}/>
-       */}
-
       <div className="bar-icons">
-        <FaBars onClick={() => setBarOn(!barOn)} />
+        {barOn ? <FaXmark onClick={() => setBarOn(false)}/> : <FaBars onClick={() => setBarOn(true)} />}
+        
       </div>
     </nav>
   );
