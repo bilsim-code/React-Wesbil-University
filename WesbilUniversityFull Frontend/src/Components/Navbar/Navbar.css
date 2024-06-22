@@ -11,6 +11,11 @@
     transition: all .6s;
 }
 
+.active-class {
+    color: gold;
+    border-bottom: 4px solid gold;
+}
+
 .nav-white {
     background: #fff;
     color: #000;
@@ -330,3 +335,4 @@
        
     }
 }
+

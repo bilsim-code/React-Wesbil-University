@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll'; 
+import { Link  } from 'react-scroll'; 
 import logo from "../../assets/princeton badge.jpg";
 import contact_icon from "../../assets/contact.png";
 import { FaSearch, FaBars } from "react-icons/fa";
@@ -49,7 +49,7 @@ const Navbar = () => {
         </li>
         <li>
           {/* react-scroll */}
-          <ScrollLink className="nav-link">Schools</ScrollLink>
+          <Link activeClass="active-class" to="schools" spy={true} smooth={true} offset={-100} duration={500} className="nav-link">Schools</Link>
         </li>
         <li>
           <RouterLink className="nav-link">myLibrary</RouterLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
         </li>
         <li>
           {/* react-scroll */}
-          <ScrollLink className="nav-link">Quick links</ScrollLink>
+          <Link activeClass="active-class" className="nav-link">Quick links</Link>
         </li>
         <li>
           <RouterLink className="nav-link">Portals</RouterLink>

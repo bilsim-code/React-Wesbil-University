@@ -1,5 +1,5 @@
 import Hero from '../../Components/Hero/Hero'
-import Schools from '../Schools/Schools'
+import Schools from '../../Components/Schools/Schools'
 import './Home.css'
 
 const Home = () => {
