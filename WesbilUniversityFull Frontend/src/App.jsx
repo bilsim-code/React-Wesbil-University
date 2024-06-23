@@ -30,7 +30,6 @@ const App = () => {
       leftRef.current.classList.remove("no-pointer-events");
       rightRef.current.classList.remove("no-pointer-events");
     }
-
     
   }, [barOn, showSearchBar, leftRef, rightRef]);
 
