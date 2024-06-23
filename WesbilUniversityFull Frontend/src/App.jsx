@@ -19,7 +19,7 @@ const App = () => {
 
   useEffect(() => {
     const mainContent = document.querySelector(".main-content");
-    if (barOn || showSearchBar) {
+    if (barOn /* || showSearchBar */) {
       mainContent.classList.add("no-pointer-events");
       mainContent.classList.add("blurred");
       leftRef.current.classList.add("no-pointer-events");
@@ -30,6 +30,8 @@ const App = () => {
       leftRef.current.classList.remove("no-pointer-events");
       rightRef.current.classList.remove("no-pointer-events");
     }
+
+    
   }, [barOn, showSearchBar, leftRef, rightRef]);
 
   return (

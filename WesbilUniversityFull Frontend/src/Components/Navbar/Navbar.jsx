@@ -27,6 +27,7 @@ const Navbar = () => {
     let scroll = window.addEventListener('scroll', () => {
       if(window.scrollY > 100) {
         navRef.current.classList.add('nav-white')
+        navRef.current.classList.add('nav')
       }
       else {
         navRef.current.classList.remove('nav-white')
@@ -49,7 +50,7 @@ const Navbar = () => {
         </li>
         <li>
           {/* react-scroll */}
-          <ScrollLink activeClass="active-class" to="schools" spy={true} smooth={true} offset={-100} duration={500} className="nav-link">Schools</ScrollLink>
+          <ScrollLink activeClass="active-class" to="schools" spy={true} smooth={true} offset={-130} duration={500} className="nav-link">Schools</ScrollLink>
         </li>
         <li>
           <RouterLink className="nav-link">myLibrary</RouterLink>

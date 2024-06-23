@@ -1,7 +1,7 @@
 import './Views.css'
 import image1 from '../../assets/princeton cs.jpg'
 import image2 from '../../assets/princeton2.jpg'
-import image3 from '../../assets/princeton1.jpg'
+import image3 from '../../assets/hero.png'
 import image4 from '../../assets/princeton3.jpg'
 import { useContext } from 'react'
 import { AppContext } from '../../Context/AppContext'
