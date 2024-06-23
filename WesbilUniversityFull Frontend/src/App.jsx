@@ -10,8 +10,12 @@ import Technology from './Pages/Technology/Technology'
 import Medicine from './Pages/Medicine/Medicine'
 import Maths_Stats from "./Pages/MathsNStats/Maths_Stats";
 import Education from "./Pages/Education/Education";
+import MainCampus from './Pages/Main Campus/MainCampus'
+import AltCampus from './Pages/AltCampus/AltCampus'
 import { useContext, useEffect } from "react";
 import { AppContext } from "./Context/AppContext";
+import Footer from "./Components/Footer/Footer";
+
 
 const App = () => {
   const { showSearchBar, barOn, leftRef, rightRef } = useContext(AppContext);
@@ -36,6 +40,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      
       <div className="main-content"> 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -48,8 +53,12 @@ const App = () => {
           <Route path="/med" element={<Medicine/>} />
           <Route path="/mathsStats" element={<Maths_Stats/>} />
           <Route path="/edu" element={<Education/>} />
+          <Route path="/mainCampus" element={<MainCampus/>} />
+          <Route path="/altCampus" element={<AltCampus/>} />
         </Routes>
+        <Footer/>
       </div>
+
     </div>
   );
 };

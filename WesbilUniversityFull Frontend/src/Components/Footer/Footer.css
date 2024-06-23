@@ -1,0 +1,188 @@
+.footer {
+    background: rgb(25, 44, 142);
+    color: #f0f0f0;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 10%;
+}
+
+.footer-logo img {
+    width: 220px;
+    border-radius: 4px;
+    transform: scale(1);
+    transition: all .5s;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #000;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-family: serif;
+}
+
+.footer-schools {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 20px 0;
+    padding-left: 20px; 
+    padding-right: 0;
+    border-left: 1px solid #fff;
+    flex-basis: 20%;
+}
+
+.footer-schools h2 {
+    margin-bottom: 4px;
+    border-bottom: 1px solid;
+}
+
+.footer-campuses {
+     display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 20px 0;
+    padding-left: 20px; 
+    border-left: 1px solid #fff;
+    flex-basis: 15%;
+}
+
+.footer-campuses h2 {
+    margin-bottom: 4px;
+    border-bottom: 1px solid;
+}
+
+.footer-quick-links h2 {
+    margin-bottom: 4px;
+    border-bottom: 1px solid;
+    white-space: nowrap;
+}
+
+.footer-quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    border-left: 1px solid #fff;
+    padding: 20px 0;
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 900px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+
+    .footer-logo img {
+        width: 50%;
+        margin: auto;
+    }
+
+    .footer-logo span {
+        font-size: 1.4rem;
+    }
+
+    .footer-schools {
+        padding-left: 0;
+        border-left: 0;
+        width: 50%;
+        display: flex;
+        
+    }
+
+    .footer-campuses {
+        padding-left: 0;
+        border-left: 0;
+        width: 50%;
+        display: flex;
+        
+    }
+
+    .footer-quick-links {
+        padding-left: 0;
+        border-left: 0;
+        width: 50%;
+        display: flex;
+        
+    }
+
+    
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+footer .footer-left {
+    font-family: serif;
+}
+
+footer .footer-right svg {
+    font-size: 1.6rem;
+    color: #f0f0f0;
+    margin-left: 10px;
+    transition: all .6s
+}
+
+footer .footer-right svg:hover {
+    color: gold;
+    font-size: 1.4rem;
+}
+
+.go-to-top  svg{
+    position: fixed;
+    left: 10px;
+    bottom: 40px;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 10px #333;
+    background: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+
+
+
+@media(max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
