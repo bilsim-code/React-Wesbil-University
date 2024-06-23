@@ -1,0 +1,38 @@
+.hero-business {
+    background: linear-gradient(rgba(1, 1, 37, 0.598),  rgba(0, 0, 0, 0.427)), url('../../assets/school-of-business-logo.webp');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.hero-business-content {
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    color: rgb(10, 23, 62);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+}
+
+.hero-business-content h1 {
+    font-size: 2.8rem;
+    padding-bottom: 2rem;
+    text-shadow: 0 0 10px #fff;
+    text-align: center;
+}
+
+.hero-business-content h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.hero-business-content h2::after,
+.hero-business-content h2::before {
+    content: '~';
+}

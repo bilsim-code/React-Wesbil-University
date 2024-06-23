@@ -60,6 +60,10 @@
     cursor: pointer
 }
 
+p.nav-link {
+    padding-top: 10px;
+}
+
 .nav-link:hover {
     color: rgb(244, 209, 11);
     border-bottom: 4px solid rgb(244, 209, 11);
