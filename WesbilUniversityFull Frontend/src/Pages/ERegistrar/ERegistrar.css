@@ -1,0 +1,26 @@
+.registrar {
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+   
+}
+
+.registrar-form {
+    background: url('../../assets/hero.png');
+    height: 100vh;
+}
+
+.registrar-form .form {
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.registrar-form .form input {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
