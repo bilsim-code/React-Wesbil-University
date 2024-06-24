@@ -32,7 +32,7 @@ const Footer = () => {
           <Link to="/mathsStats" className="footer-link">
             School of Mathematics and Statistics
           </Link>
-          <Link className="footer-link">
+          <Link to='/edu' className="footer-link">
             School of Education, Arts & Social Sciences
           </Link>
         </div>
