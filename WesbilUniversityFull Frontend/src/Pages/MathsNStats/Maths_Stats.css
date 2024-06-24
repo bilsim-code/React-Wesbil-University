@@ -1,0 +1,197 @@
+.maths-stats-welcome {
+    background: linear-gradient(rgba(1, 1, 37, 0.598), rgba(0, 0, 0, 0.427)), url('../../assets/princeton cs.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+    margin-bottom: 30px;
+}
+
+.maths-stats-welcome-content {
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    color: rgb(10, 23, 62);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+}
+
+.maths-stats-welcome-content h2 {
+    font-size: 2.8rem;
+    padding-bottom: 2rem;
+    text-shadow: 0 0 10px #fff;
+    text-align: center;
+}
+
+.maths-stats-welcome-content h3 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.maths-stats-welcome-content h3::before ,
+.maths-stats-welcome-content h3::after {
+    content: '~';
+}
+
+
+
+
+.about-join-us-math {
+    background: url('../../assets/math.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 40vw;
+    margin: 20px;
+}
+
+.join-us-container-math {
+    display: flex;
+    justify-content: space-around;
+    height: 100%
+    
+}
+
+.join-us-info-math {
+    background: royalblue;
+    padding: 60px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.join-us-info-math h3 {
+    font-size: 1rem;
+    background: gold;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: default;
+    width: 100px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    transition: all .5s;
+}
+
+.join-us-info-math h3:hover {
+    transform: scale(.8)
+}
+
+.join-us-info-math h3:hover span {
+    opacity: 0
+}
+
+.join-us-info-math p {
+    color: #fff;
+    line-height: 1.4;
+}
+
+.join-us-form-math {
+    backdrop-filter: blur(2px);
+    background: #ffffff44;
+    margin-left: 20%;
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.join-us-form-math h3 {
+    font-size: 1rem;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}    
+
+.join-us-form-math input,
+.join-us-form-math select,
+.join-us-form-math textarea {
+    padding: 8px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    outline: none;
+    border: 2px solid royalblue;
+    width: 300px
+}
+
+.join-us-form-math textarea {
+    height: 100px;
+}
+
+.join-us-form-math button {
+    background: rgb(174, 154, 4);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: grid;
+    place-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 4px;
+    color: #f0f0f0
+}
+
+@media(max-width: 900px) {
+    .about-join-us-math {
+        height: 100vh
+    }
+
+    .join-us-info-math {
+        flex-basis: 40%;
+    }
+
+    .join-us-form-math {
+        flex-basis: 60%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .join-us-info-math {
+        padding: 20px 10px;
+    }
+
+    .join-us-container-math {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    .join-us-form-math input,
+    .join-us-form-math select,
+    .join-us-form-math textarea {
+        width: 60%;
+        padding: 8px;
+        border: 2px solid royalblue;
+        outline: none;
+        margin-top: 1px;
+    }
+
+    .join-us-form-math textarea {
+        height: 60px
+    }
+}
+
+@media(max-width: 370px) {
+    .join-us-container-math {
+        gap: 0;
+    } 
+
+    .join-us-form-math input,
+    .join-us-form-math select,
+    .join-us-form-math textarea {
+        padding: 6px;
+    }
+}

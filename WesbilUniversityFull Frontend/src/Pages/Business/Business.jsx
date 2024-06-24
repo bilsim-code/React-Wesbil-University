@@ -125,10 +125,10 @@ const Business = () => {
           
           
           
-          <div className="about-join-us">
+          <div className="about-join-us-business">
             {/* Use a background image here */}
-            <div className="join-us-container">
-              <div className="join-us-info">
+            <div className="join-us-container-business">
+              <div className="join-us-info-business">
               <h3>
                 <span>Join Us</span>
                 <FaArrowRight />
@@ -143,7 +143,7 @@ const Business = () => {
                 communities worldwide
               </p>
             </div>
-            <form className="join-us-form">
+            <form className="join-us-form-business">
               <h3>Wish to be enrolled? Got a document request or a general inquiry? Report an issue?</h3>
               <input type="text" placeholder="Your name" name="name"/>
               <input type="email" placeholder="Your email" name="email"/>

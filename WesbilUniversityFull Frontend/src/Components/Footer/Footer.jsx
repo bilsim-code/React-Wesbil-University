@@ -1,16 +1,17 @@
 import "./Footer.css";
 import footer_logo from "../../assets/princeton badge.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaXTwitter,
   FaEnvelope,
-  FaCircleChevronUp
+  FaCircleChevronUp,
 } from "react-icons/fa6";
 
 const Footer = () => {
+  const location = useLocation()
   return (
     <>
       <div className="footer">
@@ -20,28 +21,28 @@ const Footer = () => {
         </div>
         <div className="footer-schools">
           <h2>Schools</h2>
-          <Link to="/sob" className="footer-link">
+          <Link to="/sob" className={`footer-link ${location.pathname === '/sob' ? 'active-class-footer' : ''}`}>
             School of Business
           </Link>
-          <Link to="/tech" className="footer-link">
+          <Link to="/tech" className={`footer-link ${location.pathname === '/tech' ? 'active-class-footer' : ''}`}>
             School of Technology
           </Link>
-          <Link to="/med" className="footer-link">
+          <Link to="/med" className={`footer-link ${location.pathname === '/med' ? 'active-class-footer' : ''}`}>
             School of medicine
           </Link>
-          <Link to="/mathsStats" className="footer-link">
+          <Link to="/mathsStats" className={`footer-link ${location.pathname === '/mathsStats' ? 'active-class-footer' : ''}`}>
             School of Mathematics and Statistics
           </Link>
-          <Link to='/edu' className="footer-link">
+          <Link to="/edu" className={`footer-link ${location.pathname === '/edu' ? 'active-class-footer' : ''}`}>
             School of Education, Arts & Social Sciences
           </Link>
         </div>
         <div className="footer-campuses">
           <h2>Campuses</h2>
-          <Link to="/mainCampus" className="footer-link">
+          <Link to="/mainCampus" className={`footer-link ${location.pathname === '/mainCampus' ? 'active-class-footer' : ''}`}>
             Main Campus
           </Link>
-          <Link to="/altCampus" className="footer-link">
+          <Link to="/altCampus" className={`footer-link ${location.pathname === '/altCampus' ? 'active-class-footer' : ''}`}>
             Alt Campus
           </Link>
         </div>
@@ -80,8 +81,8 @@ const Footer = () => {
           </a>
         </div>
         <a href="#" className="go-to-top">
-            <FaCircleChevronUp/>
-      </a>
+          <FaCircleChevronUp />
+        </a>
       </footer>
     </>
   );

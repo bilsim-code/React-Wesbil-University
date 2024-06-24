@@ -186,3 +186,9 @@ footer .footer-right svg:hover {
         gap: 10px;
     }
 }
+
+.active-class-footer {
+    color: rgb(168, 141, 5);
+    font-weight: 600;
+    font-style: italic;
+}
