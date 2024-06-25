@@ -39,6 +39,8 @@ const Navbar = () => {
    return() => window.removeEventListener('scroll', scroll)
   }, [navRef])
 
+  
+
   return (
     <nav className="nav" ref={navRef}>
       <div className="nav-left" ref={leftRef}>
