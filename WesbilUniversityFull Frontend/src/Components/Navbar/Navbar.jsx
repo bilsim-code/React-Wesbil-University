@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <nav className="nav" ref={navRef}>
       <div className="nav-left" ref={leftRef}>
-        <RouterLink exact to={'/'} className="nav-welcome">
+        <RouterLink to={'/'} className="nav-welcome">
           <img src={logo} alt="" className="logo" />
           <h3>Princeton University</h3>
         </RouterLink>
