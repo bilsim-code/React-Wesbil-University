@@ -59,7 +59,7 @@ const Footer = () => {
       <footer>
         <div className="footer-left">
           <p>
-            &copy;Copyright All Rights Reserved {new Date().getFullYear()}{" "}
+            &copy;Copyright All Rights Reserved {new Date().getFullYear()}
             Wesbil University
           </p>
         </div>
